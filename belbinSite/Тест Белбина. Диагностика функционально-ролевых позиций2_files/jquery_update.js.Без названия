@@ -1,0 +1,29 @@
+(function (D) {
+  var beforeSerialize = D.ajax.prototype.beforeSerialize;
+  D.ajax.prototype.beforeSerialize = function (element, options) {
+    beforeSerialize.call(this, element, options);
+    options.data['ajax_page_state[jquery_version]'] = D.settings.ajaxPageState.jquery_version;
+  }
+})(Drupal);
+
+/*
+     FILE ARCHIVED ON 17:34:44 Apr 13, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:51:41 Mar 12, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  exclusion.robots: 0.142
+  esindex: 0.01
+  CDXLines.iter: 16.709 (3)
+  exclusion.robots.policy: 0.132
+  RedisCDXSource: 0.792
+  PetaboxLoader3.resolve: 50.777
+  captures_list: 208.218
+  PetaboxLoader3.datanode: 183.317 (4)
+  load_resource: 93.978
+  LoadShardBlock: 187.318 (3)
+*/
